@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, sans-serif;
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.video {
+  width: 390px;
+  overflow: hidden;
+  height: 260px;
+  border-radius: 20px;
+}
+
+.shake {
+  animation-name: shake;
+  animation-iteration-count: 2;
+  animation-duration: 125ms;
+  animation-direction: forward;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+.timeout {
+  animation-name: timeout;
+  animation-iteration-count: 1;
+  animation-duration: 60s;
+  animation-direction: forward;
+}
+
+@keyframes timeout {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 4px;
+  }
+}
